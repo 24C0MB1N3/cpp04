@@ -8,8 +8,8 @@
             ~WrongAnimal();
             WrongAnimal(const WrongAnimal &copy);
             WrongAnimal& operator=(const WrongAnimal &copy);
-            void makeSound();
-            std::string getType();
+            void makeSound() const;
+            std::string getType() const;
         protected:
             std::string type;
     };
