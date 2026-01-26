@@ -1,17 +1,18 @@
 
 #include "WrongCat.hpp"
-WrongCat() : Animal()
+
+WrongCat::WrongCat() : WrongAnimal()
 {
     type = "WrongCat";
     std::cout << type << " Default constructor called" << std::endl;
 }
 
-~WrongCat()
+WrongCat::~WrongCat()
 {
     std::cout << type << " Destructor called" << std::endl;
 }
 
-WrongCat(const WrongCat &copy) : Animal(copy)
+WrongCat::WrongCat(const WrongCat &copy) : WrongAnimal(copy)
 {
     std::cout << "Copy constructor called" << std::endl;
 }
@@ -24,7 +25,7 @@ WrongCat& WrongCat::operator=(const WrongCat &copy)
     return *this;
 }
 
-const void Animal::makeSound()
+void WrongCat::makeSound()
 {
     std::cout << "Meow?" << std::endl;
 }

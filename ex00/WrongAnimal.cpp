@@ -1,16 +1,16 @@
 #include "WrongAnimal.hpp"
 
-WrongAnimal()
+WrongAnimal::WrongAnimal()
 {
-    std::cout << type << " Default constructor called" << std::endl;
+    std::cout << "WrongAnimal Default constructor called" << std::endl;
 }
 
-~WrongAnimal()
+WrongAnimal::~WrongAnimal()
 {
-    std::cout << type << " Destructor called" << std::endl;
+    std::cout << "WrongAnimal Destructor called" << std::endl;
 }
 
-WrongAnimal(const WrongAnimal &copy) : type(copy.type)
+WrongAnimal::WrongAnimal(const WrongAnimal &copy) : type(copy.type)
 {
     std::cout << "Copy constructor called" << std::endl;
 }
@@ -25,12 +25,12 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal &copy)
     return *this;
 }
 
-virtual const void WrongAnimal::makeSound()
+void WrongAnimal::makeSound()
 {
     std::cout << "WrongAnimal makes a sound" << std::endl;
 }
 
-std::string getType()
+std::string WrongAnimal::getType()
 {
     return type;
 }

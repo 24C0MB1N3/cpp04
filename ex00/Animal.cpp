@@ -1,16 +1,22 @@
 
 #include "Animal.hpp"
-Animal()
+
+Animal::Animal()
 {
-    std::cout << name << " Default constructor called" << std::endl;
+    std::cout << "Animal Default constructor called" << std::endl;
 }
 
-~Animal()
+Animal::~Animal()
 {
-    std::cout << name << " Destructor called" << std::endl;
+    std::cout << "Animal Destructor called" << std::endl;
 }
 
-Animal(const Animal &copy) : type(copy.type)
+Animal::Animal(std::string Type) : type(Type)
+{
+    std::cout << "Animal constructor called" << std::endl;
+}
+
+Animal::Animal(const Animal &copy) : type(copy.type)
 {
     std::cout << "Copy constructor called" << std::endl;
 }
@@ -25,12 +31,12 @@ Animal& Animal::operator=(const Animal &copy)
     return *this;
 }
 
-virtual const void Animal::makeSound()
+void Animal::makeSound() const
 {
     std::cout << "Animal makes a sound" << std::endl;
 }
 
-std::string Animal::getType()
+std::string Animal::getType() const
 {
     return type;
 }

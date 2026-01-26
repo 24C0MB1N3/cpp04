@@ -9,6 +9,6 @@
             ~Dog();
             Dog(const Dog &copy);
             Dog& operator=(const Dog &copy);
-            const void makeSound();
+            void makeSound() const;
     };
 #endif

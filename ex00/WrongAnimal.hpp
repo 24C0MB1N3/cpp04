@@ -8,7 +8,7 @@
             ~WrongAnimal();
             WrongAnimal(const WrongAnimal &copy);
             WrongAnimal& operator=(const WrongAnimal &copy);
-            const void makeSound();
+            void makeSound();
             std::string getType();
         protected:
             std::string type;

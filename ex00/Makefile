@@ -2,7 +2,7 @@ CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = polymorph
-FILE = Cat.cpp Dog.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
+FILE = main.cpp Cat.cpp Dog.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ = $(FILE:.cpp=.o)
 
 all: $(NAME)
